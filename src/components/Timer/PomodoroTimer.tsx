@@ -131,19 +131,19 @@ const PomodoroTimer: React.FC = () => {
       )}
 
       {/* Controls */}
-      <div className="flex justify-center space-x-4">
-        <button
-          onClick={() => isRunning ? pause() : start()}
-          className={`flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${getSessionColor()} text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200`}
-        >
-          {isRunning ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
-        </button>
-        
+      <div className="flex justify-center items-center gap-2">
         <button
           onClick={reset}
           className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
         >
           <Square className="w-5 h-5" />
+        </button>
+        
+        <button
+          onClick={() => isRunning ? pause() : start()}
+          className={`flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${getSessionColor()} text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 mx-1`}
+        >
+          {isRunning ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
         </button>
         
         <button
